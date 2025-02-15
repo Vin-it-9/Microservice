@@ -1,6 +1,7 @@
 package org.inventoryservice.service;
 
 import jakarta.transaction.Transactional;
+import org.inventoryservice.ProductNotFoundException;
 import org.inventoryservice.entity.Product;
 import org.inventoryservice.repository.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,8 @@ import java.util.List;
 public class InventoryService {
 
     @Autowired
-    private InventoryRepository inventoryRepository;
+    private
+    InventoryRepository inventoryRepository;
 
     public Product addProduct(Product product) {
         return inventoryRepository.save(product);
@@ -28,10 +30,21 @@ public class InventoryService {
         return product;
     }
 
-    public Product updateProduct(Product product , Integer id) {
-        Product updatedProduct = inventoryRepository.findById(id).get();
-        return inventoryRepository.save(updatedProduct);
+
+    public Product updateProduct(Product product, Integer id) {
+
+        Product existinProduct = inventoryRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
+
+        existinProduct.setName(product.getName());
+        existinProduct.setPrice(product.getPrice());
+        existinProduct.setQuantity(product.getQuantity());
+        existinProduct.setDescription(product.getDescription());
+
+       return inventoryRepository.save(existinProduct);
+
     }
+
 
     public void deleteProduct(Integer id) {
         inventoryRepository.deleteById(id);

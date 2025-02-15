@@ -16,15 +16,34 @@ public class Order {
     private String status;
 
     // Storing userId instead of full User to avoid tight coupling between services
-    private Long userId;
+    private Integer userId;
 
-    // Constructors
-    public Order() {}
+    private Integer productId;
 
-    public Order(LocalDateTime orderDate, String status, Long userId) {
+    private Integer quantity;
+
+    public Order(LocalDateTime orderDate, String status, Integer userId, Integer productId, Integer quantity) {
         this.orderDate = orderDate;
         this.status = status;
         this.userId = userId;
+        this.productId = productId;
+        this.quantity = quantity;
+    }
+
+    public Order(LocalDateTime orderDate, String status, Integer userId) {
+        this.orderDate = orderDate;
+        this.status = status;
+        this.userId = userId;
+    }
+
+    public Order() {
+
+    }
+
+    public Order(Integer userId, Integer productId, Integer quantity) {
+        this.userId = userId;
+        this.productId = productId;
+        this.quantity = quantity;
     }
 
     // Getters and Setters
@@ -46,10 +65,26 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }

@@ -8,5 +8,7 @@ import org.userservice.entity.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 
+    User getUserById(Integer id);
 
+    User getUserByEmail(String email);
 }

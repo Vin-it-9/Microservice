@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4496fff2-d742-4941-9a5f-8bc27e953318" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/service/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vineet/Desktop/Microservice/UserService/src/main/java/org/userservice",
+    "last_opened_file_path": "C:/Users/Vineet/Desktop/Microservice/InventoryService/src/main/java/org/inventoryservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +84,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vineet\Desktop\Microservice\InventoryService\src\main\java\org\inventoryservice" />
       <recent name="C:\Users\Vineet\Desktop\Microservice\UserService\src\main\java\org\userservice" />
       <recent name="C:\Users\Vineet\Desktop\Microservice\OrderService\src\main\java\org\orderservice" />
     </key>
@@ -153,7 +154,7 @@
       <updated>1739608572161</updated>
       <workItem from="1739608574170" duration="2721000" />
       <workItem from="1739611358744" duration="1814000" />
-      <workItem from="1739613194383" duration="3228000" />
+      <workItem from="1739613194383" duration="4686000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -171,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739615873136</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit">
+      <option name="closed" value="true" />
+      <created>1739616523544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739616523544</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <option name="closed" value="true" />
+      <created>1739617035703</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739617035703</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

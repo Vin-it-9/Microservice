@@ -15,8 +15,7 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public Order placeOrder(Integer userId, Integer productId,  Integer quantity) {
-        Order order = new Order(userId,productId,quantity);
+    public Order placeOrder(Order order) {
         return orderRepository.save(order);
     }
 
@@ -37,12 +36,14 @@ public class OrderService {
     }
 
     public void cancelOrder(Integer orderId) {
-        orderRepository.deleteById(orderId);
+        Order order = orderRepository.findById(orderId).get();
+        order.setStatus("CANCEL");
+        orderRepository.save(order);
     }
 
     public Order updateStatus(Integer orderId, String status) {
         Order order = orderRepository.findById(orderId).get();
-        order.setStatus(status);
+        order.setStatus(order.getStatus());
         return orderRepository.save(order);
     }
 

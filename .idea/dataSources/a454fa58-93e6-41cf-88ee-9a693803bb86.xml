@@ -1044,7 +1044,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="304" parent="1" name="microservice">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-02-15.09:23:09</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-02-15.09:54:21</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="305" parent="1" name="mysql">

@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4496fff2-d742-4941-9a5f-8bc27e953318" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/org/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/org/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/org/orderservice/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/org/userservice/UserServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +98,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration name="APIGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <module name="APIGateway" />
@@ -152,7 +156,7 @@
       <updated>1739608572161</updated>
       <workItem from="1739608574170" duration="2721000" />
       <workItem from="1739611358744" duration="1814000" />
-      <workItem from="1739613194383" duration="6195000" />
+      <workItem from="1739613194383" duration="8332000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -202,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739618588092</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <option name="closed" value="true" />
+      <created>1739619691484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739619691484</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

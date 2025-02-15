@@ -2,6 +2,9 @@ package org.orderservice.entity;
 
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,7 +15,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private LocalDateTime orderDate;
+    @CreationTimestamp
+    private LocalDate orderDate;
+
     private String status;
 
     // Storing userId instead of full User to avoid tight coupling between services
@@ -22,7 +27,7 @@ public class Order {
 
     private Integer quantity;
 
-    public Order(LocalDateTime orderDate, String status, Integer userId, Integer productId, Integer quantity) {
+    public Order(LocalDate orderDate, String status, Integer userId, Integer productId, Integer quantity) {
         this.orderDate = orderDate;
         this.status = status;
         this.userId = userId;
@@ -30,7 +35,7 @@ public class Order {
         this.quantity = quantity;
     }
 
-    public Order(LocalDateTime orderDate, String status, Integer userId) {
+    public Order(LocalDate orderDate, String status, Integer userId) {
         this.orderDate = orderDate;
         this.status = status;
         this.userId = userId;
@@ -53,10 +58,10 @@ public class Order {
     public void setId(Integer id) {
         this.id = id;
     }
-    public LocalDateTime getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
-    public void setOrderDate(LocalDateTime orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
     public String getStatus() {

@@ -3,18 +3,22 @@ server:
 
 spring:
   application:
-    name: ApiGateway
-
+   name: ApiGateway
   cloud:
     gateway:
-      # Define routes for the microservices
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: USERSERVICE
           uri: lb://UserService
           predicates:
             - Path=/user/**
-#        - id: CONTACTSERVICE
-#          uri: lb://ContactService
-#          predicates:
-#            - Path=/contact/**
-
+        - id: InventoryService
+          uri: lb://InventoryService
+          predicates:
+            - Path=/product/**
+        - id: OrderService
+          uri: lb://OrderService
+          predicates:
+            - Path=/order/**

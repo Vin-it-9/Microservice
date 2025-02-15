@@ -1,0 +1,20 @@
+server:
+  port: 8999
+
+spring:
+  application:
+    name: ApiGateway
+
+  cloud:
+    gateway:
+      # Define routes for the microservices
+      routes:
+        - id: USERSERVICE
+          uri: lb://UserService
+          predicates:
+            - Path=/user/**
+#        - id: CONTACTSERVICE
+#          uri: lb://ContactService
+#          predicates:
+#            - Path=/contact/**
+

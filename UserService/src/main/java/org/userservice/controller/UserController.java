@@ -1,6 +1,7 @@
 package org.userservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.userservice.entity.User;
 import org.userservice.service.UserService;
@@ -14,14 +15,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/save")
-    public User save(@RequestBody User user) {
-        return userService.createUser(user);
-    }
-
     @GetMapping("")
     public List<User> getAll() {
         return userService.findAllUsers();
+    }
+
+    @PostMapping("/save")
+    public User save(@RequestBody User user) {
+        return userService.createUser(user);
     }
 
     @GetMapping("/findById/{id}")
@@ -39,18 +40,10 @@ public class UserController {
         userService.deleteUserById(id);
     }
 
-    @PostMapping("/update/{id}")
-    public User updateUser(@RequestBody User user ,@PathVariable Integer id) {
-        return userService.updateUser(user,id);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable Integer id) {
+        User updatedUser = userService.updateUser(user, id);
+        return ResponseEntity.ok(updatedUser);
     }
-
-
-
-
-
-
-
-
-
 
 }

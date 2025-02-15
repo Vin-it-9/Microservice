@@ -42,8 +42,15 @@ public class UserService {
     }
 
     public User updateUser(User user, Integer id) {
-        User user1 = userRepository.getUserById(id);
-        return userRepository.save(user1);
+
+        User existingUser = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
+
+        existingUser.setUsername(user.getUsername());
+        existingUser.setPassword(user.getPassword());
+        existingUser.setEmail(user.getEmail());
+        return userRepository.save(existingUser);
+
     }
 
 
